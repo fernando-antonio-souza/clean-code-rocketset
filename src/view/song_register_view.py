@@ -1,6 +1,9 @@
+import os
+
 
 class SongRegisterView:
-    def register_song_initial(self):
+    def register_song_initial(self) -> dict:
+        self.__clear()
         print("Implementar nova Musica \n\n")
 
         title = input("Determine o nome da musica: ")
@@ -14,3 +17,6 @@ class SongRegisterView:
         }
 
         return new_song_informations
+    
+    def __clear(self):
+        os.system("cls||clear")
